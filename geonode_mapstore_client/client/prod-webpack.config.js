@@ -19,6 +19,6 @@ module.exports = require('./MapStore2/buildConfig')(
     },
     extractThemesPlugin,
     true,
-    "/static/mapstore/dist/",
+    "/geonode/static/mapstore/dist/",
     '.msgapi'
 );

@@ -5,6 +5,21 @@
  * This source code is licensed under the BSD-style license found in the
  * LICENSE file in the root directory of this source tree.
  */
+const CONFIGPROVIDER = require("../MapStore2/web/client/utils/ConfigProvider");
+CONFIGPROVIDER.MapSurfer = {
+   url: 'http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}',
+   options: {
+      maxZoom: 19,
+      maxNativeZoom: 19,
+      attribution: '<a href="https://www.openstreetmap.org/copyright">(c)OpenStreetMap contributors, ODbL, Imagery GIScience Research Group @ Heidelberg University</a>, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA 2.0</a>'
+   },
+   variants: {
+      GrayScale: {
+         url: 'http://korona.geog.uni-heidelberg.de/tiles/roadsg/x={x}&y={y}&z={z}'
+      }
+   }
+};
+
 require('react-widgets/dist/css/react-widgets.css');
 const assign = require("object-assign");
 const ConfigUtils = require('../MapStore2/web/client/utils/ConfigUtils');
